@@ -3769,7 +3769,7 @@ do (function()
             local inset = guiSvc:GetGuiInset()
             local cx, cy = x + inset.X, y + inset.Y
             for _, sg in ipairs(coreGui:GetChildren()) do
-                if sg:IsA("ScreenGui") and sg.Enabled and (sg.Name:sub(1, 4) == "Fian" or sg.Name == "N4TH_V2") then
+                if sg:IsA("ScreenGui") and sg.Enabled and (sg.Name:sub(1, 4) == "Fian" or sg.Name == "FIAN_V2") then
                     local px, py = sg.IgnoreGuiInset and cx or x, sg.IgnoreGuiInset and cy or y
                     for _, ch in ipairs(sg:GetChildren()) do
                         if ch:IsA("GuiObject") and ch.Visible then
@@ -3788,7 +3788,7 @@ do (function()
         local tiles = cam and cam:FindFirstChild("Tiles")
         for _, obj in ipairs(PlayerGui:GetGuiObjectsAtPosition(x, y)) do
             local sg = obj:FindFirstAncestorWhichIsA("ScreenGui")
-            if sg and (sg.Name:sub(1, 4) == "Fian" or sg.Name == "N4TH_V2") then return true end
+            if sg and (sg.Name:sub(1, 4) == "Fian" or sg.Name == "FIAN_V2") then return true end
             if obj:FindFirstAncestor("TouchGui") then return true end
             if (obj:IsA("GuiButton") or obj:IsA("TextBox") or obj:IsA("ScrollingFrame"))
                 and obj ~= gg and obj ~= worldGui and obj ~= cam and obj ~= tiles then
@@ -10612,7 +10612,7 @@ end)
 end)() end
 
 ---------------------------------------------------------------------
--- N4TH MENU (Discord UI Lib - koya-alt/Roblox-UI)
+-- FIAN MENU (Discord UI Lib - koya-alt/Roblox-UI)
 ---------------------------------------------------------------------
 Session.InitStep = "building Fian menu"
 -- Discord UI Library (Server rail, Channel sidebar, and Channel controls)
@@ -10694,7 +10694,7 @@ do (function()
     local TweenService = game:GetService("TweenService")
     local DiscordLib = {}
     local gui = create("ScreenGui", {
-        Name = "N4TH_V2",
+        Name = "FIAN_V2",
         ResetOnSpawn = false,
         DisplayOrder = 900,
         IgnoreGuiInset = true,
@@ -10937,7 +10937,7 @@ do (function()
         }, ServersHold)
 
         local launcher = corner(create("TextButton", {
-            Name = "N4THLauncher",
+            Name = "FIANLauncher",
             Position = UDim2.new(0, 16, 0.5, -24),
             Size = UDim2.fromOffset(48, 48),
             BackgroundColor3 = DiscordColors.Blurple,
@@ -12685,7 +12685,7 @@ do (function()
     end
 
     UI.DiscordLib = DiscordLib
-    UI.Window = DiscordLib:Window("N4TH v2.0 - Growtopia")
+    UI.Window = DiscordLib:Window("FIAN v2.0 - Growtopia")
 end)() end
 
 local Window = UI.Window
@@ -15832,7 +15832,7 @@ local Rejoin = {
     World = true,       -- rejoin world if kicked from world
     Server = true,      -- rejoin game if disconnected from server
     DelaySec = 5,
-    ScriptUrl = "https://raw.githubusercontent.com/ZennJxD/Fian/refs/heads/main/Fian",
+    ScriptUrl = "https://raw.githubusercontent.com/alfiannur792/scriptfian7/refs/heads/main/fian792sc",
     Keep = false,       -- always return to target world if outside a world
     Target = "",        -- target world (empty = last world)
     LastWorld = "",     -- last entered world
